@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Mining Methodologies — CRISP-DM · SEMMA · KDD | Pranith Varma Pakalapati, CMPE 256</title>
+<style>
+  body{font-family:Georgia,serif;max-width:860px;margin:0 auto;padding:32px 20px;color:#111;line-height:1.6}
+  h1{font-size:30px;line-height:1.25} h2{font-size:22px;border-bottom:1px solid #ccc;padding-bottom:6px}
+  .card{border:1px solid #ccc;border-radius:10px;padding:18px 20px;margin:18px 0}
+  .tag{display:inline-block;background:#111;color:#fff;border-radius:20px;padding:2px 12px;font-size:13px;font-family:Arial,sans-serif}
+  a{color:#111} .num{font-family:Arial,sans-serif}
+  table{border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px}
+  th,td{border:1px solid #ccc;padding:8px;text-align:left} th{background:#f2f2f2}
+  .note{background:#f7f7f7;border-left:4px solid #111;padding:12px 16px;font-family:Arial,sans-serif;font-size:14px}
+  footer{margin-top:32px;font-size:13px;color:#555;font-family:Arial,sans-serif}
+</style>
+</head>
+<body>
+<h1>Data Mining Methodologies, Done Phase by Phase</h1>
+<p><strong>Pranith Varma Pakalapati</strong> · CMPE 256, San José State University<br>
+Assignment: Data Mining Process — CRISP-DM, SEMMA &amp; KDD · Due Nov 3, 2026, 23:59 PT</p>
+<p>Three complete projects on three different datasets. Every methodology followed end to end, every number produced by executed code. Each project has a Colab notebook, a detailed report, a Medium article draft, a 3-round critic log, and a video walkthrough script.</p>
+
+<h2>Results at a glance</h2>
+<table>
+<tr><th>Methodology</th><th>Dataset</th><th>Best test result</th></tr>
+<tr><td>CRISP-DM</td><td>Telco Customer Churn (7,043 rows)</td><td>Logistic Regression — ROC-AUC 0.8416, top-decile lift 2.85×</td></tr>
+<tr><td>SEMMA</td><td>UCI Heart Disease, Cleveland (303 rows)</td><td>HistGradientBoosting — ROC-AUC 0.9632; Random Forest F1 0.9153</td></tr>
+<tr><td>KDD</td><td>UCI Wine Quality, Red (1,599 rows)</td><td>Tuned Random Forest — R² 0.4298, RMSE 0.6373</td></tr>
+</table>
+
+<div class="card">
+<span class="tag">01 · CRISP-DM</span>
+<h2>Predicting Telco Customer Churn</h2>
+<p>All 6 phases: Business Understanding → Data Understanding → Data Preparation → Modeling → Evaluation → Deployment. Month-to-month contracts churn at 42.7% vs 2.8% for two-year contracts; tenure is the strongest protective factor.</p>
+<p class="num"><a href="01-crisp-dm-telco-churn/CRISP_DM_Telco_Churn.ipynb">Notebook (executed, 23 cells)</a> ·
+<a href="01-crisp-dm-telco-churn/report.md">Full report</a> ·
+<a href="01-crisp-dm-telco-churn/medium-article.md">Medium article draft</a> ·
+<a href="01-crisp-dm-telco-churn/critic-revisions.md">Critic revisions</a> ·
+<a href="01-crisp-dm-telco-churn/video-script.md">Video script</a> ·
+<a href="01-crisp-dm-telco-churn/data/DATA_DICTIONARY.md">Data dictionary</a></p>
+</div>
+
+<div class="card">
+<span class="tag">02 · SEMMA</span>
+<h2>Predicting Heart Disease (SAS SEMMA)</h2>
+<p>All 5 phases: Sample → Explore → Modify → Model → Assess, with the SAS Enterprise Miner node mapping for each step. Teaching prototype — <strong>not a diagnostic tool</strong>. Small, single-site, 1980s sample; strong test AUC (~0.96) on just 61 test patients.</p>
+<p class="num"><a href="02-semma-heart-disease/SEMMA_Heart_Disease.ipynb">Notebook (executed, 24 cells)</a> ·
+<a href="02-semma-heart-disease/report.md">Full report</a> ·
+<a href="02-semma-heart-disease/medium-article.md">Medium article draft</a> ·
+<a href="02-semma-heart-disease/critic-revisions.md">Critic revisions</a> ·
+<a href="02-semma-heart-disease/video-script.md">Video script</a> ·
+<a href="02-semma-heart-disease/data/DATA_DICTIONARY.md">Data dictionary</a></p>
+</div>
+
+<div class="card">
+<span class="tag">03 · KDD</span>
+<h2>Discovering What Makes a Good Wine</h2>
+<p>All 5 KDD steps (Fayyad et al.): Selection → Preprocessing → Transformation → Data Mining → Interpretation / Evaluation. Alcohol (r +0.48) and low volatile acidity (r −0.39) drive quality; residual sugar is irrelevant (r +0.01). Best model explains ~43% of quality variance — sensory scores are noisy.</p>
+<p class="num"><a href="03-kdd-wine-quality/KDD_Wine_Quality.ipynb">Notebook (executed, 31 cells)</a> ·
+<a href="03-kdd-wine-quality/report.md">Full report</a> ·
+<a href="03-kdd-wine-quality/medium-article.md">Medium article draft</a> ·
+<a href="03-kdd-wine-quality/critic-revisions.md">Critic revisions</a> ·
+<a href="03-kdd-wine-quality/video-script.md">Video script</a> ·
+<a href="03-kdd-wine-quality/data/DATA_DICTIONARY.md">Data dictionary</a></p>
+</div>
+
+<h2>How to reproduce</h2>
+<p>Every notebook is Colab-ready: cell 1 installs packages, cell 2 downloads the dataset from its public URL. Seed 42 everywhere. Run All reproduces the reported numbers.</p>
+
+<div class="note"><strong>Videos &amp; Medium links:</strong> the three Medium drafts and three 6-minute video scripts are in each project folder. Publish them from your own Medium / YouTube accounts and add the URLs here — the agent cannot publish to your accounts. Until then, the drafts and scripts are the deliverables.</div>
+
+<footer>Sources: IBM Telco churn sample; UCI Machine Learning Repository (Heart Disease, Cleveland; Wine Quality, Cortez et al. 2009). Methodologies: CRISP-DM (Chapman et al., 2000); SEMMA (SAS Institute); KDD (Fayyad, Piatetsky-Shapiro &amp; Smyth, 1996).</footer>
+</body>
+</html>

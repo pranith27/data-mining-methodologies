@@ -1,0 +1,4 @@
+Model,CV ROC-AUC (mean),CV ROC-AUC (std),Test ROC-AUC,Test Accuracy,Test Precision,Test Recall,Test F1
+Logistic Regression,0.9037,0.0205,0.96,0.8525,0.7879,0.9286,0.8525
+Random Forest (tuned),0.8918,0.0266,0.961,0.918,0.871,0.9643,0.9153
+HistGradientBoosting,0.8602,0.0214,0.9632,0.918,0.871,0.9643,0.9153

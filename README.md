@@ -3,7 +3,22 @@
 **Author:** Pranith Varma Pakalapati
 **Course:** CMPE 256, San José State University
 **Assignment:** Data Mining Process Assignment — principled, phase-by-phase data science with three methodologies, a different dataset for each, all artifacts in GitHub
+**Due:** Tuesday, November 3, 2026, 23:59 PT
+**Submit in Canvas:** a website URL (see [Step 5](#5-submit-the-website-url-in-canvas) below)
 
+## Published articles and video walkthroughs
+
+All three Medium articles are published, and all three narrated walkthrough videos are on YouTube:
+
+**Medium articles**
+- CRISP-DM (Telco Churn) — [We Lost 1 in 4 Customers. Here's What the Data Said — and What We Did About It](https://medium.com/@pranithvarma.234/we-lost-1-in-4-customers-heres-what-the-data-said-and-what-we-did-about-it-440560d129bb)
+- SEMMA (Heart Disease) — [I Ran a 1980s Heart Dataset Through SEMMA — and the Models Tied](https://medium.com/@pranithvarma.234/i-ran-a-1980s-heart-dataset-through-semma-and-the-models-tied-259cc51eb0dd)
+- KDD (Wine Quality) — [What 1,599 Wines Taught Me About Quality — A KDD Story](https://medium.com/@pranithvarma.234/what-1-599-wines-taught-me-about-quality-a-kdd-story-3b7e54325f24)
+
+**YouTube walkthroughs** (narrated, male voiceover)
+- CRISP-DM — https://youtu.be/A_KGWct-lUg
+- SEMMA — https://youtu.be/srAwSKYl9YM
+- KDD — https://youtu.be/fTEAhjRz0nE
 
 ## What this repo is
 
@@ -132,20 +147,6 @@ Each `artifacts/` folder also has a `MODEL_CARD.txt` (what the model is, what da
 - **SEMMA without SAS:** SEMMA comes from SAS Enterprise Miner and no SAS licence was available, so it is implemented in Python. The SEMMA report maps every step to its SAS node (Sample → Data Partition, Explore → StatExplore, and so on). The methodology logic is the same; the vendor tool is not.
 - **Heart disease sample:** only 303 patients, 61 in the test set. The AUC looks strong, but uncertainty is wide — treat it as a prototype, never as medical advice.
 - **Wine quality:** R² of 0.43 means most of what makes a wine taste good is not in the lab measurements. The model finds patterns; it does not give a recipe for better wine.
-
-## Published articles and video walkthroughs
-
-All three Medium articles are published, and all three narrated walkthrough videos are on YouTube:
-
-**Medium articles**
-- CRISP-DM (Telco Churn) — [We Lost 1 in 4 Customers. Here's What the Data Said — and What We Did About It](https://medium.com/@pranithvarma.234/we-lost-1-in-4-customers-heres-what-the-data-said-and-what-we-did-about-it-440560d129bb)
-- SEMMA (Heart Disease) — [I Ran a 1980s Heart Dataset Through SEMMA — and the Models Tied](https://medium.com/@pranithvarma.234/i-ran-a-1980s-heart-dataset-through-semma-and-the-models-tied-259cc51eb0dd)
-- KDD (Wine Quality) — [What 1,599 Wines Taught Me About Quality — A KDD Story](https://medium.com/@pranithvarma.234/what-1-599-wines-taught-me-about-quality-a-kdd-story-3b7e54325f24)
-
-**YouTube walkthroughs** (narrated, male voiceover)
-- CRISP-DM — https://youtu.be/A_KGWct-lUg
-- SEMMA — https://youtu.be/srAwSKYl9YM
-- KDD — https://youtu.be/fTEAhjRz0nE
 
 ## Sources
 

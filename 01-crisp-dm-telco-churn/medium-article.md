@@ -54,4 +54,3 @@ Three things. First, that the simplest model won — I'd have bet on the Random 
 
 Churn prediction isn't a modelling problem. It's a business problem with a modelling step in the middle, and CRISP-DM kept it that way: question first, data second, preparation third, models fourth, honest evaluation fifth, and a deployment plan last. The result is a model that clears its bar, a scoring pipeline a team can actually run, and a retention list ordered by risk — with the top 10% of customers nearly three times as likely to leave as the average customer. That's not a notebook. That's a decision, waiting to be made every month.
 
-*The full project — executed Colab notebook, detailed report, data dictionary, and saved model — is in the project repository (01-crisp-dm-telco-churn). The dataset is the public IBM Telco Customer Churn sample; all metrics are from a held-out test set of 1,409 customers, seed 42.*

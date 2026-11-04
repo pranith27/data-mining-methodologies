@@ -1,0 +1,16 @@
+SEMMA Heart Disease — deployment artifact
+Model: RandomForestClassifier(n_estimators=200, max_depth=8,
+       min_samples_leaf=2, random_state=42) in a sklearn Pipeline
+       with median imputation + one-hot encoding (no scaling).
+Training data: all 303 rows of UCI Heart Disease (Cleveland),
+       target binarized (0 = no disease, 1-4 = disease present).
+Why this model: deployment candidate recommended in report.md —
+       joint-best test accuracy/precision/recall/F1, test ROC-AUC
+       0.961 (within noise of the leader), direct feature
+       importances. Teaching/research prototype only — NOT a
+       diagnostic device.
+Usage: pickle.load(open('best_model.pkl','rb')).predict_proba(X)
+       where X has the 13 raw columns: age, sex, cp, trestbps,
+       chol, fbs, restecg, thalach, exang, oldpeak, slope, ca,
+       thal (missing coded as '?' or NaN, as in the raw file).
+Built with scikit-learn==1.9.1, numpy==1.26.4, pandas==2.1.4.

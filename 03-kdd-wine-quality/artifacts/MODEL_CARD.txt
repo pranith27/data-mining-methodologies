@@ -1,0 +1,17 @@
+KDD Wine Quality — deployment artifact
+Model: RandomForestRegressor(n_estimators=500, max_depth=10,
+       min_samples_leaf=5, random_state=42) in a sklearn Pipeline
+       with log1p on skewed features (see below), passthrough else.
+Training data: all 1,359 unique red wines (deduplicated),
+       UCI Wine Quality (Vinho Verde reds, Cortez et al. 2009).
+Engineered features (computed inside predict path): total_acidity
+       = fixed+volatile+citric acidity; sulphur_ratio =
+       free/total sulfur dioxide; alcohol_x_va = alcohol *
+       volatile acidity. log1p applied to: residual sugar,
+       chlorides, sulphates, free/total sulfur dioxide.
+Held-out test metrics of these hyperparameters: R2 = 0.4298,
+       RMSE = 0.6373 (ranking/QC use, not a taster replacement).
+Usage: pickle.load(open('best_model.pkl','rb')).predict(df)
+       where df has the 11 raw lab columns; build the 3 engineered
+       features first (see build_final_model.py: add_features).
+Built with scikit-learn==1.9.1, numpy==1.26.4, pandas==2.1.4.

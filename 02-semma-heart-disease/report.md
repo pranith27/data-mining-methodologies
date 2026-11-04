@@ -224,8 +224,9 @@ The data are de-identified and public (UCI); no new patient data were collected 
 | Executed notebook (Colab-ready) | `SEMMA_Heart_Disease.ipynb` |
 | Raw data + dictionary | `data/processed.cleveland.data`, `data/DATA_DICTIONARY.md` |
 | This report | `report.md` |
-| Medium article draft | `medium-article.md` |
+| Medium article (published) | https://medium.com/@pranithvarma.234/i-ran-a-1980s-heart-dataset-through-semma-and-the-models-tied-259cc51eb0dd |
 | Critic revision log | `critic-revisions.md` |
-| Video walkthrough script | `video-script.md` |
+| Video walkthrough (YouTube) | https://youtu.be/srAwSKYl9YM |
+| Deployment model + model card | `artifacts/best_model.pkl`, `artifacts/MODEL_CARD.txt` |
 | Setup / run guide | `README.md`, `requirements.txt` |
 | Model comparison table | `model_comparison.csv` |

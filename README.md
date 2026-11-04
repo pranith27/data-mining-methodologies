@@ -6,6 +6,20 @@
 **Due:** Tuesday, November 3, 2026, 23:59 PT
 **Submit in Canvas:** a website URL (see [Step 5](#5-submit-the-website-url-in-canvas) below)
 
+## Published articles and video walkthroughs
+
+All three Medium articles are published, and all three narrated walkthrough videos are on YouTube:
+
+**Medium articles**
+- CRISP-DM (Telco Churn) — [We Lost 1 in 4 Customers. Here's What the Data Said — and What We Did About It](https://medium.com/@pranithvarma.234/we-lost-1-in-4-customers-heres-what-the-data-said-and-what-we-did-about-it-440560d129bb)
+- SEMMA (Heart Disease) — [I Ran a 1980s Heart Dataset Through SEMMA — and the Models Tied](https://medium.com/@pranithvarma.234/i-ran-a-1980s-heart-dataset-through-semma-and-the-models-tied-259cc51eb0dd)
+- KDD (Wine Quality) — [What 1,599 Wines Taught Me About Quality — A KDD Story](https://medium.com/@pranithvarma.234/what-1-599-wines-taught-me-about-quality-a-kdd-story-3b7e54325f24)
+
+**YouTube walkthroughs** (narrated, male voiceover)
+- CRISP-DM — https://youtu.be/A_KGWct-lUg
+- SEMMA — https://youtu.be/srAwSKYl9YM
+- KDD — https://youtu.be/fTEAhjRz0nE
+
 ## What this repo is
 
 Three complete, self-contained data mining projects. Each one follows its methodology from start to finish — business problem, data, preparation, modelling, evaluation, and deployment — and each one has an executed notebook, so every number in the reports comes from code that actually ran. No placeholder results.
@@ -36,18 +50,19 @@ data-mining-methodologies/
 └── 03-kdd-wine-quality/
 ```
 
-Every project folder contains exactly the same set of deliverables:
+Every project folder contains the same set of deliverables:
 
 ```
 <project>/
 ├── <Notebook>.ipynb       Colab-ready notebook, already executed (outputs saved)
 ├── report.md              Detailed phase-by-phase report with real numbers
-├── medium-article.md      Medium-ready article draft (paste into Medium to publish)
 ├── critic-revisions.md    3 critic rounds, persona prompt quoted, fixes documented
-├── video-script.md        6-minute YouTube walkthrough script, with timestamps
+├── artifacts/             Saved final deployment model (best_model.pkl) + MODEL_CARD.txt
+├── build_final_model.py   Reproducible script that trains and saves the artifact
 ├── README.md              Project-specific notes and Colab link
-├── requirements.txt       Python packages needed
-└── data/                  The dataset + DATA_DICTIONARY.md
+├── requirements.txt       Python packages needed (pinned versions)
+├── data/                  The dataset + DATA_DICTIONARY.md
+└── figures/               Charts used in the report and video (SEMMA, KDD)
 ```
 
 Notebook sizes, verified Oct 28, 2026: CRISP-DM 23 cells, SEMMA 24 cells, KDD 31 cells — **0 error cells in any notebook**.
@@ -116,12 +131,15 @@ Paste this URL as your Canvas submission, before **Nov 3, 2026, 23:59 PT**:
 https://pranith27.github.io/data-mining-methodologies/
 ```
 
-## Optional extras (improve the submission, not required to submit)
+## Deployment artifacts
 
-These are ready to go — they just need your accounts, which the agent cannot publish from:
+Every project ships a saved final model plus a model card, so the "deployment" phase is a runnable artifact, not just a notebook cell:
 
-- **Medium articles:** paste each `medium-article.md` into Medium, use a notebook chart as the header image, publish, then add the three Medium URLs to `index.html` and re-push.
-- **YouTube walkthroughs:** record each `video-script.md` (about 6 minutes, screen + voiceover), upload, then add the three YouTube URLs to `index.html` and re-push.
+- `01-crisp-dm-telco-churn/artifacts/best_model.pkl` — Logistic Regression churn pipeline (ROC-AUC 0.8416)
+- `02-semma-heart-disease/artifacts/best_model.pkl` — tuned Random Forest pipeline (test ROC-AUC 0.961)
+- `03-kdd-wine-quality/artifacts/best_model.pkl` — tuned Random Forest regressor pipeline (test R² 0.4298)
+
+Each `artifacts/` folder also has a `MODEL_CARD.txt` (what the model is, what data it trained on, how to load and call it). The `build_final_model.py` script in each project reproduces the artifact from the raw data and sanity-checks the metrics against the executed notebook before saving. Built with scikit-learn==1.9.1 (see pinned `requirements.txt`).
 
 ## Honest limitations (stated in the deliverables, not hidden)
 

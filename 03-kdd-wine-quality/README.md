@@ -30,9 +30,9 @@ UCI Wine Quality — red wine (Cortez et al., 2009): **1,599 wines, 11 physicoch
 | `data/winequality-red.csv` | The dataset (UCI, semicolon-separated) |
 | `data/DATA_DICTIONARY.md` | Every attribute, target distribution, data-quality audit |
 | `report.md` | Detailed step-by-step KDD report with all real numbers |
-| `medium-article.md` | Medium-ready article draft (~1,500 words) |
 | `critic-revisions.md` | Critic log — 3 revision rounds against a world-renowned-KDD-authority persona |
-| `video-script.md` | 6-minute YouTube walkthrough script with timestamps |
+| `artifacts/best_model.pkl` | Saved deployment model (tuned Random Forest regressor pipeline) + `MODEL_CARD.txt` |
+| `build_final_model.py` | Script that reproduces and saves the deployment model |
 | `requirements.txt` | Python dependencies |
 
 ## Run it

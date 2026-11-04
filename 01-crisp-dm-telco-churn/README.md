@@ -37,9 +37,7 @@ Note: if you execute locally with matplotlib 3.6.3, use `matplotlib-inline==0.1.
 
 - `CRISP_DM_Telco_Churn.ipynb` — executed Colab-ready notebook, all 6 CRISP-DM phases (23 cells, 14 code, 0 errors)
 - `report.md` — detailed phase-by-phase report with real numbers from the executed notebook
-- `medium-article.md` — Medium-ready article draft (~1,500 words)
 - `critic-revisions.md` — critic log: world-renowned-CRISP-DM-authority persona, 3 revision rounds with scores
-- `video-script.md` — 6-minute YouTube walkthrough script with timestamps
 - `data/Telco-Customer-Churn.csv` — dataset (7,043 rows)
 - `data/DATA_DICTIONARY.md` — column definitions and the known data-quality defect
 - `artifacts/best_model.pkl` — saved best model (Logistic Regression pipeline)

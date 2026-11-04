@@ -3,8 +3,6 @@
 **Author:** Pranith Varma Pakalapati
 **Course:** CMPE 256, San José State University
 **Assignment:** Data Mining Process Assignment — principled, phase-by-phase data science with three methodologies, a different dataset for each, all artifacts in GitHub
-**Due:** Tuesday, November 3, 2026, 23:59 PT
-**Submit in Canvas:** a website URL (see [Step 5](#5-submit-the-website-url-in-canvas) below)
 
 
 ## What this repo is
